@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: 'Courier New', Courier, monospace;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+	cursor: pointer;
+	font-size: 24px;
+	border: none;
+	background-color: #fff;
+	text-transform: uppercase;
+	outline: none;
+	letter-spacing: 0;
+	line-height: 45px;
+	transition: letter-spacing 0.5s;
+	-webkit-transition: letter-spacing 0.5s;
+	-moz-transition: letter-spacing 0.5s;
+	-ms-transition: letter-spacing 0.5s;
+	-o-transition: letter-spacing 0.5s;
+}
+
+.button::before,
+.button::after {
+	content: '';
+	top: 0;
+	border: 1px solid #000;
+	display: block;
+	width: 0;
+	margin: 0 auto;
+	opacity: 0;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+.button::after {
+	bottom: 0;
+}
+
+.button:hover::before,
+.button:hover::after {
+	width: 100%;
+	opacity: 1;
+}
+
+.button:hover {
+	letter-spacing: 5px;
+}
